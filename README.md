@@ -1,6 +1,6 @@
 <div style="background-color: #1C7879; border: 2px solid #ddd; padding: 5px; text-align: left;">
 
-![Data-lake](https://github.com/arunsinp/SQL/assets/15100077/c9525d83-8b8f-43b7-84ac-0326e90a6979)
+<img src="Data-lake.png" alt="Types of data" style="max-width: 900px;"/>
 
 # Content
 
