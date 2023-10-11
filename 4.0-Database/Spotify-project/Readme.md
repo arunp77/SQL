@@ -62,7 +62,19 @@ This project is an end-to-end ETL (Extract, Transform, Load) pipeline designed t
 
 ## Challenges Faced
 
-- Discussion of any challenges encountered during the project and how they were overcome (will write later).
+- While working on this Spotify ETL project, I encountered several challenges that required creative problem-solving and learning. Some of the main challenges included:
+
+    - **Spotify API Integration:** Integrating the Spotify API to access and retrieve data from the playlist was a learning curve. It required understanding authentication mechanisms and handling rate limits.
+
+    - **Data Transformation:** Transforming the raw data into structured formats involved complex data manipulation. This included dealing with nested JSON structures and converting them into usable data frames.
+
+    - **Automating ETL Process:** Designing an automated ETL process that continuously updates the data from Spotify to S3 and triggers transformations posed a unique challenge. Ensuring that the process is both efficient and reliable was a significant task.
+
+    - **Data Cleaning:** Managing and cleaning the data to remove duplicates, handle missing values, and ensure data consistency required careful attention.
+
+    - **Error Handling:** Building robust error handling mechanisms to gracefully manage failures and ensure the pipeline runs smoothly was a critical aspect of the project.
+
+    Overcoming these challenges not only improved my technical skills but also enhanced my problem-solving abilities. It's essential to acknowledge that facing and conquering these hurdles was an integral part of the learning process.
 
 ## Future Improvements
 
