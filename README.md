@@ -1,5 +1,7 @@
 # Content
 
+
+# Introduction about this repository
 This repository is divided into following subfolders, where each folder contains different topics related to Query language, Databases, Data warehouse, data lake, and about some tools (MySQL, PostgreSQL, Bigquery, Snowflake, Apache airflow etc.). In the end of the Repository, I have also given some simple example projects.
 
 - [**1.0-Query-language:**](https://github.com/arunsinp/Databases-data-pipeline-SQL/tree/main/1.0-Querry-language) This contains the basic query based language
@@ -10,7 +12,28 @@ This repository is divided into following subfolders, where each folder contains
 - [**6.0-Project:**](https://github.com/arunsinp/Databases-data-pipeline-SQL/tree/main/6.0-Projects) Projects
 
 
-<h1>An introduction to SQL: a beginner's guide</h1>
+# 🗒️ Table of content
+
+1. An introduction to SQL: a beginner's guide
+  - Query Languages (QL)
+  - Important Query languages
+  - What is SQL?
+  - Need for SQL
+  - Some of the advantages of SQL
+  - Disadvantages of SQL
+  - SQL (Relational) and NoSQL
+  - MySQL and BigQuery
+2. What is Data?
+  - Role of data in a program
+  - Data categories
+3. What is a Database?
+   - Database Model
+   - What is DBMS?
+   - DBMS categories
+4.  What is a Relational Database?
+5.  SQL Commands, explained
+
+# 1. An introduction to SQL: a beginner's guide
     <ul>
         <li> SQL is a domain-specific programming language that is used to manage relational databases.</li>
         <li> It is designed for managing and querying data that is organized in a relational database management system (RDBMS).</li>
@@ -18,16 +41,15 @@ This repository is divided into following subfolders, where each folder contains
         <li> SQL is used by a wide range of organizations to manage and analyze data stored in databases.</li>
         <li> It is a fundamental tool for data analysts, database administrators, software developers, and other professionals who work with data in relational databases.</li>
     </ul>
-</div>
 
 But Going into more details on SQL, first lets know what are main query languages used, what are database and understand differences between few terminology.
 
-# Query Languages (QL)
+## 1.1. Query Languages (QL)
 
 - QL is a general term used to describe a variety of query languages used in database management systems (DBMS). 
 - These query languages are used to interact with the database, allowing users to search, retrieve, and modify data stored within the system.
 
-## Important Query languages:
+## 1.2. Important Query languages:
 
 There are numerous Query Languages (QL) used in database management systems (DBMS). Some of the most common QLs include:
 
@@ -53,7 +75,18 @@ There are numerous Query Languages (QL) used in database management systems (DBM
 
 These are just a few examples of the many QLs used in database management systems.
 
-## Some of the advantages of SQL
+## 1.3. What is SQL?
+
+"SQL stands for Structured Query Language".
+- SQL is a computer language for storing, manipulating, and retrieving data in a relational database.
+- SQL provides useful commands for performing these operations.
+
+## 1.4. Need for SQL
+
+- Because of its popularity, multiple vendors started their own implementations of relational databases.
+- The need to develop one common language for managing both data and structures became necessary.
+
+## 1.5. Some of the advantages of SQL
 
 - **Easy to learn:** SQL has a simple and easy-to-understand syntax, which makes it easy for beginners to learn.
 - **Portable:** SQL is a standard language, which means that it can be used with a variety of relational database management systems (RDBMS).
@@ -66,7 +99,7 @@ These are just a few examples of the many QLs used in database management system
 - **Ease of integration:** SQL databases can be easily integrated with other applications and tools, making it easy to access and analyze data from different sources.
 - **Standardization:** SQL is a standardized language, which means that developers can use the same language and code across different databases and platforms.
 
-## Disadvantages of SQL
+## 1.6. Disadvantages of SQL
 With the advantages of SQL, it also has some disadvantages, which are as follows:
 
 - **Complexity:** SQL can be complex and difficult to learn, especially for those who are new to programming.
@@ -76,7 +109,7 @@ With the advantages of SQL, it also has some disadvantages, which are as follows
 - **Security concerns:** SQL databases can be vulnerable to SQL injection attacks, which can result in data loss or corruption.
 - **Performance issues:** SQL databases can experience performance issues, especially when complex queries are involved. This can be exacerbated when dealing with large data sets.
 
-### SQL (Relational) and NoSQL
+## 1.5. SQL (Relational) and NoSQL
 
 |       | RDBMS SQL	| NoSQL (Not only SQL) RDBMS|
 |-------|-------|---------------|
@@ -90,7 +123,7 @@ With the advantages of SQL, it also has some disadvantages, which are as follows
 | Data Types	| Structured	| Unstructured, semi-structured |
 | Examples	| MySQL, PostgreSQL	| MongoDB, Cassandra, Redis |
 
-### MySQL and BigQuery
+## 1.6. MySQL and BigQuery
 
 MySQL and BigQuery are both relational database management systems (RDBMS), but they have several differences in terms of their architecture, functionality, and usage. Here are some of the key differences between MySQL and BigQuery:
 
@@ -107,29 +140,14 @@ MySQL and BigQuery are both relational database management systems (RDBMS), but 
 Overall, while both MySQL and BigQuery are RDBMS systems, they have different architectures, features, and use cases, and are often used for different types of projects.
 
 
-
-# 🗒️ Table of content
-
-1. What is Data?
-2. Role of data in a program
-3. Data categories
-4. What is a Database?
-5. Database Model
-6. What is DBMS?
-7. DBMS categories
-8. What is a Relational Database?
-9. What is SQL?
-10. Need for SQL
-11. SQL Commands, explained
-
-## 1. What is Data?
+# 2. What is Data?
 
 Data are
    - individual facts
    - statistics
    - items of information
  
-## 2. Role of data in a program
+## 2.1. Role of data in a program
 
 All the programs can be divided into two major parts.
 
@@ -138,7 +156,7 @@ All the programs can be divided into two major parts.
 
 The code in a program is static. But data is dynamic. Hence the runtime behavior of a program is largely dependent on data.
 
-## 3. Data categories
+## 2.2. Data categories
 
 Data can be broadly categorized into 3 categories based on its format.
 
@@ -146,7 +164,7 @@ Data can be broadly categorized into 3 categories based on its format.
    - Unstructured
    - Semi-Structured
  
- ### 3.1. Structured Data
+ ## 2.3. Structured Data
 
    Structured Data aka "Quantitative Data" is the data which
    
@@ -156,7 +174,7 @@ Data can be broadly categorized into 3 categories based on its format.
 
    Structured data accounts for only about 20% of data. Examples: Name, Address.
    
- ### 3.2. Unstructured Data
+ ## 2.4. Unstructured Data
 
    Unstructured Data aka "Qualitative Data" is the data which
    - does not have any predefined data model
@@ -164,26 +182,28 @@ Data can be broadly categorized into 3 categories based on its format.
 
    Unstructured data accounts for about 80% of data. Examples: Text Files, Audio/Videos.
    
- ### 3.3. Semi-structured Data
+ ## 2.5. Semi-structured Data
 
   - semi-structured data is the “bridge” between structured and unstructured data.
   - It does not have a predefined data model and is more complex than structured data, yet easier to store than unstructured data.
   - Mostly in JSON/XML/CSV formats.
  
-## 4. What is a Database?
+
+
+# 3. What is a Database?
 
 A database is ❝an organized collection of data❞.
 
    - stored in a computer system so that
    - it can be easily accessed and managed
    
-## 5. Database Model
+## 3.1. Database Model
 
 - A database model is a data model that determines the logical structure of a database.
 - It fundamentally determines how data can be stored, organized, and manipulated.
 - One popular database model is the relational model, which uses a table-based format.
 
-## 6. What is DBMS?
+## 3.2. What is DBMS?
  
 DBMS stands for Database Management System.
 
@@ -193,7 +213,7 @@ DBMS stands for Database Management System.
     - applications
     - database
 
-A DBMS would typically take care of
+  A DBMS would typically take care of
 
     ❯ AuthN & AuthZ
     ❯ Create, Modify, Delete a Database
@@ -202,8 +222,7 @@ A DBMS would typically take care of
     ❯ Query Data
     ❯ Handle transactions
 
-
-## 7. DBMS categories
+## 3.2. DBMS categories
 
 - Broadly DBMS are categorized into
     - Relational DBMS (RDBMS)
@@ -211,26 +230,18 @@ A DBMS would typically take care of
 - RDBMS handles relational models and manages structured data.
 - NoSQL comes with various database models and manages both unstructured and semi-structured data.
 
-## 8. What is a Relational Database?
+
+
+
+# 4. What is a Relational Database?
 
 A relational database is a ❝collection of data items❞ that have some ❝pre-defined relationships❞ between them.
 
 These items are organized as a set of "Tables" with "Columns" and "Rows".
 - A relationship between 2 tables is established based on one or multiple similar columns.
 
-## 9. What is SQL?
 
-"SQL stands for Structured Query Language".
-- SQL is a computer language for storing, manipulating, and retrieving data in a relational database.
-- SQL provides useful commands for performing these operations.
-
-## 10. Need for SQL
-
-- Because of its popularity, multiple vendors started their own implementations of relational databases.
-- The need to develop one common language for managing both data and structures became necessary.
-
-
-## 11. SQL Commands, explained
+# 5. SQL Commands, explained
 
    - DDL
    - DML
@@ -240,14 +251,12 @@ These items are organized as a set of "Tables" with "Columns" and "Rows".
 
   ![image](https://user-images.githubusercontent.com/15100077/217216740-11156098-d4f6-4dce-80b9-7d2cb637926f.png)
 
-### 11.1. DDL
-  
-DDL  ➟  Data Definition Language
+## 5.1. DDL ➟  Data Definition Language
 
 - DDL commands are used to define the database schema.
 - DDL is a set of SQL commands that are used to create, modify, and delete database structures but not data.
 
-#### List of DDL Commands
+### List of DDL Commands
 
 - CREATE: Used to create the database or its objects (like Table, Views, Stored Procedures, Index, etc.)
 - DROP: Used to delete objects from the database.
@@ -256,13 +265,11 @@ DDL  ➟  Data Definition Language
 - RENAME: Used to rename an object already existing in the database.
 - COMMENT: Used to add comments to the data dictionary.
      
-### 11.2. DML
-
-DML  ➟  Data Manipulation Language
+## 5.2. DML ➟  Data Manipulation Language
 
 - DML commands are used to manipulate the data present in the database.
 
-#### List of DML Commands
+### List of DML Commands
 
 - INSERT: Used to insert data into a table.
 - UPDATE: Used to update existing data within a table.
@@ -271,34 +278,28 @@ DML  ➟  Data Manipulation Language
 - CALL: Used to call a PL/SQL code.
 - EXPLAIN PLAN: To describe the access path to data.
 
-### 11.3. DQL
-
-DQL  ➟  Data Query Language
+## 5.3. DQL ➟  Data Query Language
 
 - DQL commands are used for performing queries on the data within schema objects.
 
-#### List of DQL Commands
+### List of DQL Commands
 
 - SELECT: Used to retrieve data from the database.
 
-### 11.4. DCL
-
-DCL  ➟  Data Control Language
+## 5.4. DCL  ➟  Data Control Language
 
 - DCL commands mainly deal with the rights, permissions, and other controls of the database system.
 
-#### List of DCL Commands
+### List of DCL Commands
 
 - GRANT: To give users access privileges to the database.
 - REVOKE: To withdraw the user’s access privileges.
 
-### 11.5. TCL
-
-TCL  ➟  Transaction Control Language
+## 5.5. TCL  ➟  Transaction Control Language
 
 - TCL commands deal with the transaction within the database.
 
-#### List of TCL Commands
+### List of TCL Commands
 
 - COMMIT: Used to commit a transaction.
 - ROLLBACK: Used to rollback a transaction in case of any error occurs.
