@@ -1,7 +1,3 @@
-<div style="background-color: #1C7879; border: 2px solid #ddd; padding: 5px; text-align: left;">
-
-<img src="Data-lake.png" alt="Types of data" style="max-width: 900px;"/>
-
 # Content
 
 This repository is divided into following subfolders, where each folder contains different topics related to Query language, Databases, Data warehouse, data lake, and about some tools (MySQL, PostgreSQL, Bigquery, Snowflake, Apache airflow etc.). In the end of the Repository, I have also given some simple example projects.
