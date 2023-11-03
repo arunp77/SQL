@@ -111,6 +111,17 @@ FROM CLASSES
 WHERE CLASS_NAME IN ('Grade 8', 'Grade 9', 'Grade 10');
 
 
+-- Non-teaching staff 
+SELECT STAFF_TYPE
+,    (FIRST_NAME||' '||LAST_NAME) AS FULL_NAME, AGE
+,    (CASE WHEN GENDER = 'M' THEN 'Male'
+           WHEN GENDER = 'F' THEN 'Female'
+      END) AS GENDER
+,    JOIN_DATE
+FROM STAFF
+WHERE STAFF_TYPE = 'Non-Teaching';
+
+
 -- NOW JOINING TWO WILL GIVE ALL THE STAFF WHO TEACHS IN GRADES-8, 9, 10.
 SELECT STF.STAFF_TYPE, 
 	(STF.FIRST_NAME||' '||STF.LAST_NAME) AS FULL_NAME,
@@ -124,6 +135,7 @@ JOIN CLASSES CLS ON STF.STAFF_ID = CLS.TEACHER_ID
 WHERE CLASS_NAME IN ('Grade 8', 'Grade 9', 'Grade 10');
 
 
+-- Now combining the staff details for teaching and non teaching who teach in grade 8. 9. 10 --
 SELECT STF.STAFF_TYPE
 ,    (STF.FIRST_NAME||' '||STF.LAST_NAME) AS FULL_NAME
 ,    STF.AGE
@@ -146,11 +158,21 @@ FROM STAFF
 WHERE STAFF_TYPE = 'Non-Teaching';
 
 
+
+------------------- Group by --------------------------------
+-- Find the number of staff in each staff_type
+
+SELECT STAFF_TYPE, COUNT(*) AS no_of_staff_members
+FROM STAFF
+GROUP BY STAFF_TYPE;
+
 -- Count no of students in each class
 SELECT SC.CLASS_ID, COUNT(1) AS "no_of_students"
 FROM STUDENT_CLASSES SC
 GROUP BY SC.CLASS_ID
 ORDER BY SC.CLASS_ID;
+
+
 
 -- Return only the records where there are more than 100 students in each class
 SELECT SC.CLASS_ID, COUNT(1) AS "no_of_students"
@@ -166,8 +188,25 @@ GROUP BY PARENT_ID
 HAVING COUNT(1) > 1;
 
 
+
+
 --SUBQUERY: Query written inside a query is called subquery.
 -- Fetch the details of parents having more than 1 kids going to this school. Also display student details.
+SELECT (P.FIRST_NAME||' '||P.LAST_NAME) AS PARENT_NAME
+FROM PARENTS P
+ORDER BY PARENT_NAME;
+
+SELECT (std.FIRST_NAME || ' ' || std.LAST_NAME) as Student_name
+FROM STUDENTS AS std
+ORDER BY Student_name;
+
+SELECT P.PARENT_ID, COUNT(*) AS no_of _kids, (P.FIRST_NAME||' '||P.LAST_NAME) AS PARENT_NAME, count(*)
+FROM PARENTS P
+
+having no_of _kids > 1
+ORDER BY PARENT_NAME;
+
+
 SELECT (P.FIRST_NAME||' '||P.LAST_NAME) AS PARENT_NAME
 ,    (S.FIRST_NAME||' '||S.LAST_NAME) AS STUDENT_NAME
 ,    S.AGE AS STUDENT_AGE
